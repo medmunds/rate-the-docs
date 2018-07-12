@@ -1,0 +1,158 @@
+/* This depends on sphinx-rtd-theme, which includes Font Awesome 4.7 and Wyrm (wyrmsass.org) */
+
+
+/*
+ * Page layout
+ */
+
+footer {
+  margin-bottom: 3rem; /* allow scrolling content past the ratings widget */
+}
+
+.ratd-widget {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+@media (min-width: 1100px) {
+  /* Keep the rating widget aligned content-right when page hits max content width
+      .wy-nav-side {width: 300px;}
+      .wy-nav-content {max-width: 800px;}
+  */
+  .ratd-widget {
+    right: calc(100% - 1100px);
+  }
+}
+
+
+/*
+ * Widget layout
+ */
+
+.ratd-widget {
+  display: grid;
+  /* match 'controls' column width to RTD content right margin (.wy-nav-content { padding-right }) */
+  grid-template-columns: 1fr 1.618rem;
+  grid-template-rows: 1fr;
+  grid-template-areas: "main controls";
+}
+@media (min-width: 768px) {
+  .ratd-widget {
+    grid-template-columns: 1fr 3.236rem;
+  }
+}
+
+.ratd-panels {
+  grid-area: main;
+  margin: 12px 0;
+}
+.ratd-panel {
+  padding-left: 12px;
+}
+
+.ratd-toggle {
+  grid-area: controls;
+  justify-self: center;
+  align-self: center;
+  margin: 12px 0;
+}
+.ratd-toggle.ratd-toggle-close {
+  align-self: start;
+  margin: 6px 0;
+}
+
+
+/*
+ * Appearance
+ */
+
+.ratd-widget {
+  border-top-left-radius: 8px; /* $base-font-size / 2 */
+  background-color: #E7F2FA; /* $alert-background: lighten($blue, 50%), where $blue: #2980B9; */
+}
+
+.ratd-widget .btn {
+  font-size: 90%;
+}
+
+.ratd-panel-suggestion > *:not(:first-child) {
+  margin-top: 8px;
+}
+
+.ratd-panel-suggestion label span {
+  display: block;
+}
+
+.ratd-suggestion-length {
+  float: right;
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
+  color: #999; /* $gray-light */
+}
+
+.ratd-suggestion-tip {
+  display: block;
+  clear: both;
+}
+
+.ratd-toggle.btn-link {
+  color: inherit;
+}
+
+/*
+ * State animations
+ */
+
+/* widget close */
+.ratd-widget {
+  opacity: 1;
+  transition: opacity 0.25s ease-in;
+}
+.ratd-widget.ratd-state-closing {
+  opacity: 0;
+  pointer-events: none;
+}
+.ratd-widget.ratd-state-closed {
+  display: none;
+}
+
+/* widget collapse */
+.ratd-panels {
+  overflow: hidden;
+  width: 330px;
+  transition: width 0.25s ease-in-out;
+}
+.ratd-panel {
+  width: 330px; /* don't wrap during collapse */
+}
+.ratd-widget.ratd-state-collapsed .ratd-panels {
+  width: 0;
+}
+
+/* panel change */
+.ratd-panel {
+  overflow: hidden;
+  transition: height 0.25s ease-in-out;
+}
+
+/* toggle control change */
+.ratd-toggle {
+  opacity: 1;
+  transform: rotate(0deg);
+  transition: opacity 0.25s ease-in-out,
+  transform 0.25s ease-in-out;
+}
+.ratd-toggle[disabled] {
+  pointer-events: none;
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+/* skip all transitions during initialization */
+.ratd-widget.ratd-state-loading,
+.ratd-widget.ratd-state-loading .ratd-panels,
+.ratd-widget.ratd-state-loading .ratd-panel,
+.ratd-widget.ratd-state-loading .ratd-toggle
+{
+  transition: none;
+}
