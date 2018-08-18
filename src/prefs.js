@@ -1,31 +1,12 @@
-"use strict";
-
+// Simple persistent preferences API (using localStorage)
 
 export default function Prefs(appLabel) {
   let cache;
 
   try {
-    cache = JSON.parse(localStorage.getItem(appLabel) || "{}");
+    cache = JSON.parse(localStorage.getItem(appLabel)) || {};
   } catch (e) {
     cache = {};
-  }
-
-  function get(key) {
-    return cache[key];
-  }
-
-  function set(key, value, flushUpdates=true) {
-    cache[key] = value;
-    if (flushUpdates) {
-      flush();
-    }
-  }
-
-  function clearAll(flushUpdates=true) {
-    cache = {};
-    if (flushUpdates) {
-      flush();
-    }
   }
 
   function flush() {
@@ -33,9 +14,24 @@ export default function Prefs(appLabel) {
   }
 
   return {
-    get,
-    set,
-    clearAll,
+    get(key) {
+      return cache[key];
+    },
+
+    set(key, value, flushUpdates=true) {
+      cache[key] = value;
+      if (flushUpdates) {
+        flush();
+      }
+    },
+
+    clearAll(flushUpdates=true) {
+      cache = {};
+      if (flushUpdates) {
+        flush();
+      }
+    },
+
     flush,
   };
 }

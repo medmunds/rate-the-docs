@@ -1,5 +1,3 @@
-"use strict";
-
 import Prefs from "./prefs";
 import recording from "./recording";
 

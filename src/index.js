@@ -1,5 +1,3 @@
-"use strict";
-
 import initWidget from "./widget";
 
 function onDocumentReady(callback) {
