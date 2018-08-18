@@ -12,7 +12,8 @@
     ".editorconfig",
     ".gitignore",
     "LICENSE",
-    "README",
+    "README.md",
+    "_readme/**",
     "package.json",
     "rollup.config.js"
   ],
