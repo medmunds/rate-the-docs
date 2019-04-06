@@ -140,13 +140,13 @@ footer {
 }
 
 /* toggle control change */
-.ratd-toggle {
+.btn.ratd-toggle {
   opacity: 1;
   transform: rotate(0deg);
   transition: opacity 0.25s ease-in-out,
   transform 0.25s ease-in-out;
 }
-.ratd-toggle[disabled] {
+.btn.ratd-toggle[disabled] {
   pointer-events: none;
   opacity: 0;
   transform: rotate(180deg);
