@@ -2,6 +2,16 @@
   "name": "rate-the-docs",
   "version": "0.1.0",
   "description": "Feedback widget for Read the Docs documentation",
+  "keywords": [
+    "read-the-docs",
+    "rating",
+    "feedback-widget",
+    "readthedocs",
+    "rtd",
+    "documentation",
+    "docs",
+    "feedback"
+  ],
   "main": "dist/rate-the-docs.min.js",
   "module": "dist/rate-the-docs.es.min.js",
   "files": [
