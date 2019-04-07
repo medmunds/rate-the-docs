@@ -6,8 +6,7 @@ const cjs = BABEL_ENV === 'cjs' || NODE_ENV === 'test';
 
 module.exports = {
   presets: [
-    ['env', { loose: true, modules: false }],
-    'stage-2',
+    ['@babel/preset-env', { loose: true, modules: false }],
   ],
   plugins: [
     cjs && 'transform-es2015-modules-commonjs',

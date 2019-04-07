@@ -38,8 +38,8 @@ export default {
       },
     }),
     babel({
-      plugins: ['external-helpers'],
-      presets: [production && "minify"].filter(Boolean),
+      comments: !production,
+      presets: [production && "babel-preset-minify"].filter(Boolean),
     }),
   ],
   output: [
