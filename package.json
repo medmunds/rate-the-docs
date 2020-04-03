@@ -1,6 +1,6 @@
 {
   "name": "rate-the-docs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Feedback widget for Read the Docs documentation",
   "keywords": [
     "read-the-docs",
@@ -37,9 +37,10 @@
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "babel-preset-minify": "^0.5.0",
-    "postcss-header": "^1.0.0",
+    "postcss": "^7.0.0",
+    "postcss-header": "^2.0.0",
     "postcss-preset-env": "^6.6.0",
-    "rollup": "^1.9.0",
+    "rollup": "^2.3.2",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-html": "^0.2.1",
     "rollup-plugin-postcss": "^2.0.3"
