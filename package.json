@@ -39,7 +39,7 @@
     "@rollup/plugin-babel": "^5.0.0",
     "babel-preset-minify": "^0.5.0",
     "postcss": "^8.2.4",
-    "postcss-header": "^3.0.1",
+    "postcss-banner": "^4.0.0",
     "postcss-preset-env": "^6.6.0",
     "rollup": "^2.3.2",
     "rollup-plugin-html": "^0.2.1",

@@ -3,7 +3,7 @@
 import babel from '@rollup/plugin-babel';
 import html from 'rollup-plugin-html'; // note: @rollup/plugin-html is *not* an upgrade to this
 import postcss from 'rollup-plugin-postcss'
-import postcssHeader from 'postcss-header';
+import postcssBanner from 'postcss-banner';
 import postcssPresetEnv from 'postcss-preset-env';
 import pkg from './package.json';
 
@@ -13,7 +13,8 @@ const externals = [
 ];
 
 const production = process.env.BUILD === "production";
-const banner = `/*! ${pkg.name} ${pkg.version} - ${pkg.repository} */`;
+const banner = `${pkg.name} ${pkg.version} - ${pkg.repository}`;
+const bannerJS = `/*! ${banner} */`;
 
 export default {
   input: 'src/index.js',
@@ -23,7 +24,7 @@ export default {
       // extract: true, // uncomment for external css files
       minimize: production, // uses cssnano
       plugins: [
-        postcssHeader({ header: banner }),
+        postcssBanner({ banner, important: true, inline: true }),
         postcssPresetEnv(),
       ],
       sourceMap: !production,  // inlined, so don't include in production
@@ -45,9 +46,9 @@ export default {
   ],
   output: [
     { file: outputFilename(pkg.main), format: 'umd', name: 'RateTheDocs',
-      banner: banner, sourcemap: true },
+      banner: bannerJS, sourcemap: true },
     { file: outputFilename(pkg.module), format: 'esm',
-      banner: banner, sourcemap: true },
+      banner: bannerJS, sourcemap: true },
   ],
 };
 

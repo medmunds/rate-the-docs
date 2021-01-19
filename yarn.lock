@@ -2166,6 +2166,13 @@ postcss-attribute-case-insensitive@^4.0.1:
     postcss "^7.0.2"
     postcss-selector-parser "^6.0.2"
 
+postcss-banner@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-banner/-/postcss-banner-4.0.0.tgz#6ad5701c8e2c2c17ee669bb737ababe930320dad"
+  integrity sha512-jYbd7nhUonUsw4CdhB3uDhBV9tvMewMGYiNQTGd++LncPgQqhjNCl/+f9Tchn4a48EUEoXcZqwqEDQIKRtWNDg==
+  dependencies:
+    postcss "^8.2.2"
+
 postcss-calc@^7.0.1:
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-7.0.5.tgz#f8a6e99f12e619c2ebc23cf6c486fdc15860933e"
@@ -2338,11 +2345,6 @@ postcss-gap-properties@^2.0.0:
   integrity sha512-QZSqDaMgXCHuHTEzMsS2KfVDOq7ZFiknSpkrPJY6jmxbugUPTuSzs/vuE5I3zv0WAS+3vhrlqhijiprnuQfzmg==
   dependencies:
     postcss "^7.0.2"
-
-postcss-header@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-header/-/postcss-header-3.0.1.tgz#2695d7956536590d61e4cca8b7943235005226b4"
-  integrity sha512-bPt7W9yVq7RY7hEs3r9Zy9Q3PhNRq0aLup5+K5Gwt01s7Oeqb0QV7BGtL6fJwTk132/zxzsVe9Gg6gwlXSLZ3A==
 
 postcss-image-set-function@^3.0.1:
   version "3.0.1"
@@ -2783,7 +2785,7 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^8.2.4:
+postcss@^8.2.2, postcss@^8.2.4:
   version "8.2.4"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.2.4.tgz#20a98a39cf303d15129c2865a9ec37eda0031d04"
   integrity sha512-kRFftRoExRVXZlwUuay9iC824qmXPcQQVzAjbCCgjpXnkdMCJYBu2gTwAaFBzv8ewND6O8xFb3aELmEkh9zTzg==
