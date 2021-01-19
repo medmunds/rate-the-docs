@@ -1,7 +1,7 @@
 // Adapted from https://developers.livechatinc.com/blog/how-to-create-javascript-libraries-in-2018-part-1/
 
-import babel from 'rollup-plugin-babel';
-import html from 'rollup-plugin-html';
+import babel from '@rollup/plugin-babel';
+import html from 'rollup-plugin-html'; // note: @rollup/plugin-html is *not* an upgrade to this
 import postcss from 'rollup-plugin-postcss'
 import postcssHeader from 'postcss-header';
 import postcssPresetEnv from 'postcss-preset-env';
@@ -38,6 +38,7 @@ export default {
       },
     }),
     babel({
+      babelHelpers: 'bundled',
       comments: !production,
       presets: [production && "babel-preset-minify"].filter(Boolean),
     }),
