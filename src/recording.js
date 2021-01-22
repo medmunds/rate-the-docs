@@ -15,7 +15,7 @@ function recordEvent(action, label, value) {
       'send_to': READTHEDOCS_DATA.user_analytics_code,
       'event_category': category,
       'event_label': label,
-      'event_value': value,
+      'value': value,
       'dimension1': READTHEDOCS_DATA.project,
       'dimension2': READTHEDOCS_DATA.version
     });
