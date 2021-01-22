@@ -1,6 +1,6 @@
 {
   "name": "rate-the-docs",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Feedback widget for Read the Docs documentation",
   "keywords": [
     "read-the-docs",
