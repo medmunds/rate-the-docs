@@ -17,15 +17,7 @@ footer {
   position: fixed;
   bottom: 0;
   right: 0;
-}
-@media (min-width: 1100px) {
-  /* Keep the rating widget aligned content-right when page hits max content width
-      .wy-nav-side {width: 300px;}
-      .wy-nav-content {max-width: 800px;}
-  */
-  .ratd-widget {
-    right: calc(100% - 1100px);
-  }
+  z-index: 9999;
 }
 
 
