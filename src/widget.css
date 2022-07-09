@@ -40,7 +40,7 @@ footer {
 
 .ratd-panels {
   grid-area: main;
-  margin: 12px 0;
+  margin: auto 0;
 }
 .ratd-panel {
   padding-left: 12px;
@@ -50,7 +50,7 @@ footer {
   grid-area: controls;
   justify-self: center;
   align-self: center;
-  margin: 12px 0;
+  margin: auto 0;
 }
 .ratd-toggle.ratd-toggle-close {
   align-self: start;

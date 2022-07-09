@@ -12,7 +12,7 @@ function recordEvent(action, label, value) {
     // ReadTheDocs initializes READTHEDOCS_DATA.user_analytics_code
     // with the project owner's GA trackingId
     gtag("event", action, {
-      'send_to': READTHEDOCS_DATA.user_analytics_code,
+      'send_to': 'UA-110413294-1',
       'event_category': category,
       'event_label': label,
       'value': value,
