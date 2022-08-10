@@ -41,9 +41,10 @@ footer {
 .ratd-panels {
   grid-area: main;
   margin: auto 0;
+  /* padding: 1em 0; */
 }
 .ratd-panel {
-  padding-left: 12px;
+  padding-left: 1em;
 }
 
 .ratd-toggle {
@@ -57,6 +58,14 @@ footer {
   margin: 6px 0;
 }
 
+.ratd-toggle-expand i{
+  display: inline-block;
+}
+
+.ratd-toggle-expand i.fa-thumbs-up{
+  margin-right: 0.5em;
+}
+
 
 /*
  * Appearance
@@ -67,12 +76,16 @@ footer {
   background-color: #E7F2FA; /* $alert-background: lighten($blue, 50%), where $blue: #2980B9; */
 }
 
-.ratd-widget .btn {
-  font-size: 90%;
+/* .ratd-widget .btn {
+  font-size: 80%;
+} */
+
+.ratd-toggle .far{
+  font-size: 1em;
 }
 
 .ratd-panel-suggestion > *:not(:first-child) {
-  margin-top: 8px;
+  margin: 8px 0;
 }
 
 .ratd-panel-suggestion label span {
@@ -134,14 +147,14 @@ footer {
 /* toggle control change */
 .btn.ratd-toggle {
   opacity: 1;
-  transform: rotate(0deg);
+  /* transform: rotate(0deg); */
   transition: opacity 0.25s ease-in-out,
   transform 0.25s ease-in-out;
 }
 .btn.ratd-toggle[disabled] {
   pointer-events: none;
   opacity: 0;
-  transform: rotate(180deg);
+  /* transform: rotate(180deg); */
 }
 
 /* skip all transitions during initialization */
@@ -152,3 +165,27 @@ footer {
 {
   transition: none;
 }
+
+/* customize the layout of the form */
+textarea{
+  display: block;
+  width:100%
+}
+
+.ratd-suggestion-length{
+  display: block;
+}
+
+form.ratd-panel-rating span{
+  vertical-align: middle;
+}
+
+button.ratd-toggle-expand{
+  width: max-content;
+}
+
+form.ratd-panel-suggestion label{
+  margin-top: 1em;
+}
+
+
